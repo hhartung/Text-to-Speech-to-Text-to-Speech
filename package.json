@@ -1,14 +1,16 @@
 {
-  "name": "ssl-example",
+  "name": "express-ssl-starter-kit
+",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple SSL enabled express.js server with certificate generate helper script",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "gen-crt": "openssl genrsa -des3 -passout pass:x -out server.pass.key 2048 &&  openssl rsa -passin pass:x -in server.pass.key -out server.key && rm server.pass.key && openssl req -nodes -new -key server.key -out server.csr && openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt && rm server.csr"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "jens alexander ewald",
+  "license": "MIT",
+  "private": true,
   "dependencies": {
     "express": "^4.11.1"
   }
