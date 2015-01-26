@@ -1,6 +1,5 @@
 {
-  "name": "express-ssl-starter-kit
-",
+  "name": "express-ssl-starter-kit",
   "version": "1.0.0",
   "description": "A simple SSL enabled express.js server with certificate generate helper script",
   "main": "index.js",
