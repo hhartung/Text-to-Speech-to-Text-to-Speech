@@ -11,55 +11,9 @@ $(document).ready(function() {
   var final_transcript = "";
   var speaking = false;
   var recognizing = false;
-<<<<<<< HEAD
-=======
 
 
 
-
-
-$(".headline").fadeIn(1000);
->>>>>>> Develop
-
-  var prepareUtterance = function(sText) {
-    utterance.lang = 'de-DE';
-    utterance.text = sText;
-
-    utterance.onstart = function () {
-      speaking = true;
-      console.log("synth start");
-      recognition.start();
-    };
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-var prepareUtterance = function(sText) {
-  utterance.lang = 'de-DE';
-  utterance.text = sText;
-
-  utterance.onstart = function () {
-    speaking = true;
-    console.log("start");
-    recognition.start();
-  };
-
-  utterance.onend = function() {
-    console.log("end");
-    speaking = false;
-
-  };
-
-  window.speechSynthesis.speak(utterance);
-
-}
-
-document.getElementById("speakButton").addEventListener("click", function (event) {
-	event.preventDefault();
-  if(!speaking){
-  prepareUtterance(text.value);
-  }else {
-    console.log("already speaking!");
-=======
 
 
 $(".headline").fadeIn(1000);
@@ -74,18 +28,12 @@ $(".headline").fadeIn(1000);
       recognition.start();
     };
 
-=======
->>>>>>> Develop
     utterance.onend = function() {
       console.log("synth end");
       speaking = false;
     };
 
     window.speechSynthesis.speak(utterance);
-<<<<<<< HEAD
->>>>>>> Develop
-=======
->>>>>>> Develop
   }
 
 
@@ -100,7 +48,7 @@ $(".headline").fadeIn(1000);
     
   });
   //document.getElementById("speakButton").addEventListener("click", function (event) {
-  	//event.preventDefault();
+    //event.preventDefault();
     
     
   //});
@@ -114,51 +62,6 @@ $(".headline").fadeIn(1000);
   recognition.interimResults = true;
   recognition.lang = "de-DE";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-recognition.onresult = function(event) { 
-  for(i = event.resultIndex; i < event.results.length; ++i) {
-    if (event.results[i].isFinal) {
-        final_transcript += event.results[i][0].transcript;
-        console.log("RESULT:" + final_transcript);
-        textResult.innerHTML = final_transcript;
-        recognition.stop();
-    }
-  }
-}
-
-recognition.onend = function(event) {
-  r = textResult.innerHTML;
-  prepareUtterance(r);
-  final_transcript = "";
-=======
-
-  recognition.onstart = function(event) {
-    console.log("rec start");
-  };
-
-  recognition.onresult = function(event) { 
-    for(i = event.resultIndex; i < event.results.length; ++i) {
-      if (event.results[i].isFinal) {
-          final_transcript += event.results[i][0].transcript;
-          console.log("RESULT:" + final_transcript);
-          textResult.innerHTML = final_transcript;
-          $("#result").fadeIn(1000);
-          
-          recognition.stop();
-
-      }
-    }
-  }
->>>>>>> Develop
-
-  recognition.onend = function(event) {
-    console.log("rec end");
-    r = textResult.innerHTML;
-    prepareUtterance(r);
-    final_transcript = "";
-
-=======
 
   recognition.onstart = function(event) {
     console.log("rec start");
@@ -184,7 +87,6 @@ recognition.onend = function(event) {
     prepareUtterance(r);
     final_transcript = "";
 
->>>>>>> Develop
   }
 
 
