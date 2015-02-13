@@ -2,18 +2,41 @@
 <html>
     <head>
         <title>Scriptings</title>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
 
 	<body>
-    <div>
-      <form method="get" action="">
-        <textArea id="field"></textArea>
-			  <button id="speakButton">Speak!</button>
-			  <span id="result"></span>
-      </form>
-    </div>
+        <div id="wrapper">
+            <div id="header">
+                <h1 class="headline">-TEXT-TO-SPEECH-TO-TEXT-TO-SPEECH-</h1>
+
+            </div>
+           
+            <div id="main">
+                <div id="textField">
+                    <p>Enter your text here</p>
+                    <hr class="line">
+
+                    <input type="text" id="field" x-webkit-speech >
+
+                   
+
+
+                    <hr class="line">
+                    <button id="speakButton">Start</button>
+
+                    <p>Result</p>
+                    <hr class="line">
+                    <p id="result"></p>
+                                        <hr class="line">
+
+
+                </div>
+            </div>
+       </div>
+
+
 	</body>
 
 	<footer>
