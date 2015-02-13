@@ -13,14 +13,7 @@ var speaking = false;
 var recognizing = false;
 
 
-
-
-
-
-
 var prepareUtterance = function(sText) {
-
-
   utterance.lang = 'de-DE';
   utterance.text = sText;
 
@@ -67,10 +60,7 @@ recognition.onresult = function(event) {
         final_transcript += event.results[i][0].transcript;
         console.log("RESULT:" + final_transcript);
         textResult.innerHTML = final_transcript;
-
-        
         recognition.stop();
-
     }
   }
 }
@@ -78,7 +68,6 @@ recognition.onresult = function(event) {
 recognition.onend = function(event) {
   r = textResult.innerHTML;
   prepareUtterance(r);
-  console.log(r);
   final_transcript = "";
 
 }
